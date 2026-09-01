@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ah jkj</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        radial-gradient(circle at center,#202020 0%,#080808 60%,#000 100%);
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+
+/* Background glow */
+body::before{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:#00eaff;
+    filter:blur(150px);
+    opacity:.15;
+}
+
+/* Main */
+.container{
+    position:relative;
+    text-align:center;
+    animation:appear 1.2s ease;
+}
+
+/* Photo */
+.photo{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:25px;
+
+    border:3px solid rgba(0,238,255,.8);
+
+    box-shadow:
+        0 0 20px #00eaff,
+        0 0 60px rgba(0,234,255,.35);
+
+    animation:float 3s ease-in-out infinite;
+}
+
+/* HELLO */
+.hello{
+    margin-top:25px;
+    color:white;
+    font-size:55px;
+    font-weight:900;
+    letter-spacing:10px;
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 25px #00eaff,
+        0 0 50px #00eaff;
+
+    animation:glow 2s ease-in-out infinite alternate;
+}
+
+/* Line */
+.line{
+    width:150px;
+    height:3px;
+    margin:15px auto 0;
+    background:#00eaff;
+    box-shadow:0 0 15px #00eaff;
+    border-radius:10px;
+}
+
+/* Animations */
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+@keyframes glow{
+    from{
+        opacity:.7;
+        transform:scale(1);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.05);
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:scale(.7);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* Mobile */
+@media(max-width:500px){
+
+    .photo{
+        width:220px;
+        height:220px;
+    }
+
+    .hello{
+        font-size:40px;
+        letter-spacing:6px;
+    }
+
+    .line{
+        width:120px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <img class="photo" src="https://i.postimg.cc/p2VMwS05/photo-2026-09-01-15-51-43.jpg" alt="Photo">
+
+    <div class="hello">កាដួយម៉ែអា king.sakk អាកូនមីចោកាចុយ king.sakk ហែងកុំភ្លើពេកអាចុយម្រាយហែង Jo អីក៏ Jo មេះអាថោកទាបនេះ🥰🥰</div>
+
+    <div class="line"></div>
+
+</div>
+
+</body>
+</html>
+
